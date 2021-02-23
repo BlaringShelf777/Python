@@ -8,7 +8,7 @@ def bubbleSort(array):
                 array[i] = array[i+1]
                 array[i+1] = temp
 def randomList(list, size):
-    for i in range(size):
+    for _ in range(size):
         list.append(random.randrange(0, 100))
 
 list = []
