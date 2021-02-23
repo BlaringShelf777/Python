@@ -8,7 +8,7 @@ def bubbleSort(array):
                 array[i+1] = temp
 
 
-array = [54,26,93,17,77,31,44,55,20]
+array = [54,26,93,17,77,31,44,55,20] 
 
 print('> Array not sorted:', array)
 bubbleSort(array)
