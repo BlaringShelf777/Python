@@ -1,3 +1,4 @@
+import random
 
 def bubbleSort(array):
     for j in range(len(array) - 1, 0, -1):
@@ -6,10 +7,12 @@ def bubbleSort(array):
                 temp = array[i]
                 array[i] = array[i+1]
                 array[i+1] = temp
+def randomList(list, size):
+    for i in range(size):
+        list.append(random.randrange(0, 100))
 
-
-array = [54,26,93,17,77,31,44,55,20] 
-
-print('> Array not sorted:', array)
-bubbleSort(array)
-print('> Array sorted:', array)
+list = []
+randomList(list, 10)
+print('> Array not sorted:', list)
+bubbleSort(list)
+print('> Array sorted:', list)
