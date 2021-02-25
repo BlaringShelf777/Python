@@ -1,3 +1,11 @@
+import random
+
+def randPivot(array, start, end):
+    index = random.randint(start + 1, end)
+    pivotVal = array[index]
+    array[index] = array[start]
+    array[start] = pivotVal
+    return pivotVal
 
 def quickSort(array, start, end):
     if end > start:
@@ -6,7 +14,7 @@ def quickSort(array, start, end):
         quickSort(array, pivot + 1, end)
 
 def partition(array, start, end):
-    i, j, pivotVal, left = start, end, array[start], 1
+    i, j, pivotVal, left = start, end, randPivot(array, start, end), 1
     while i != j:
         if left:
             if array[j] > pivotVal:
@@ -22,9 +30,8 @@ def partition(array, start, end):
                 left = 1
                 array[j] = array[i]
                 j -= 1
-        array[j] = pivotVal
+    array[j] = pivotVal
     return j
-
 
 
 
